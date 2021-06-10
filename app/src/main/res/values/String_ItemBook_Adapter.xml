@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="id">1</string>
+    <string name="tenSach">Doraemon</string>
+    <string name="tenTacGia">Kim Dong</string>
+    <string name="soTrang">200</string>
+</resources>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="10sp">
+
+        <com.chauthai.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swipeRevealLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:mode="same_level"
+            app:dragEdge="right">
+
+            <!-- Your secondary layout here -->
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:id="@+id/linearlayout_delete"
+                android:background="#E91E63">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_delete"/>
+            </LinearLayout>
+
+            <!-- Your main layout here -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="9"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/id"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/id"
+                    android:textSize="40sp"
+                    android:layout_weight="2"
+                    android:gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="30sp"
+                        android:text="@string/tenSach"
+                        android:id="@+id/tenSach"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tenTacGia"
+                        android:textSize="20sp"
+                        android:id="@+id/tenTacGia"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/soTrang"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:text="@string/soTrang"
+                    android:textSize="30sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+
+        </com.chauthai.swipereveallayout.SwipeRevealLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
